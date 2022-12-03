@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax css</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </header>
+    <section>
+        <img src="https://www.freepnglogos.com/pics/birds" id="birds">
+        <img src="bg-sky-01.png" id="sky-bg">
+        <img src="back-moountain-01.png" id="back-mountain">
+        <img src="mid-forest-01.png" id="back-forest">
+        <img src="semi-front-forest-01.png" id="mid-forest">
+        <h1 id="text">WILD FOREST</h1>
+        <a href="#" id="btn">Explore</a>
+        <img src="front-forest-01.png" id="front-forest">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Quia commodi dolores repellat, fuga tempore laboriosam voluptatum molestiae 
+            eum rem fugiat inventore? Nemo, quas non. Modi provident illo debitis 
+            saepe, quos illum consectetur aliquid enim nihil similique voluptate dignissimos. 
+            <br><br> fugiat maiores autem nam accusantium sint perferendis commodi blanditiis. 
+            Sequi distinctio nihil exercitationem fugit eum. Nemo sapiente enim ab repudiandae, 
+            ihil repellendus, sunt natus incidunt nostrum ut ipsum eaque culpa animi aspernatur 
+            ad<br><br> praesentium dolores tempore. Quas dolorum maxime minima adipisci at corrupti, 
+            necessitatibus qui placeat magni porro quidem repellat corporis et quaerat accusamus, 
+            quisquam minus repudiandae dolor. In nesciunt asperiores quisquam. Doloribus enim culpa 
+            consectetur beatae ratione dolorum dolor tempora vitae nemo error, 
+            harum ducimus unde dolore, aspernatur doloremque inventore magnam ea, 
+            praesentium ad eum facere id quaerat? Doloribus asperiores et atque. 
+            Qui dolorum, distinctio quis consectetur, veniam error rem iure natus
+             vero ratione nisi ipsa eius non maxime voluptatem. Reprehenderit, 
+             dolorem non veniam sed excepturi quod magnam sint consequatur, beatae aliquid 
+             tempore voluptatum est. Doloribus culpa ex nemo, laboriosam officia dolores aliquam nobis.
+              Optio fugiat quibusdam, aperiam facere animi quasi fugit repellat cupiditate nulla, 
+              ut dignissimos blanditiis atque illum laboriosam qui ipsam. Optio ipsum omnis aliquid 
+              accusantium ipsa nemo vero!<br><br> praesentium dolores tempore. Quas dolorum maxime minima adipisci at corrupti, 
+              necessitatibus qui placeat magni porro quidem repellat corporis et quaerat accusamus, 
+              quisquam minus repudiandae dolor. In nesciunt asperiores quisquam. Doloribus enim culpa 
+              consectetur beatae ratione dolorum dolor tempora vitae nemo error, 
+              harum ducimus unde dolore, aspernatur doloremque inventore magnam ea, 
+              praesentium ad eum facere id quaerat? Doloribus asperiores et atque. 
+              Qui dolorum, distinctio quis consectetur, veniam error rem iure natus
+               vero ratione nisi ipsa eius non maxime voluptatem. Reprehenderit, 
+               dolorem non veniam sed excepturi quod magnam sint consequatur, beatae aliquid 
+               tempore voluptatum est. Doloribus culpa ex nemo, laboriosam officia dolores aliquam nobis.
+                Optio fugiat quibusdam, aperiam facere animi quasi fugit repellat cupiditate nulla, 
+                ut dignissimos blanditiis atque illum laboriosam qui ipsam. Optio ipsum omnis aliquid 
+                accusantium ipsa nemo vero!</p>
+    </div>
+    <script>
+        let skybg = document.getElementById('sky-bg');
+        let backmount = document.getElementById('back-mountain');
+        let backforest = document.getElementById('back-forest');
+        let midforest = document.getElementById('mid-forest');
+        let frontforest = document.getElementById('front-forest');
+        let text = document.getElementById('text');
+        let button = document.getElementById('btn');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            backmount.style.left = value * 0.025 + "px";
+            backforest.style.top = value * 0.25 + "px";
+            midforest.style.top = value *0.2 + "px";
+            text.style.marginRight = value * 4 + "px";
+            button.style.top = value * 1.5 + "px";
+            header.style.top = value * 1.5 + "px";
+        })
+    </script>
+</body>
+</html>
